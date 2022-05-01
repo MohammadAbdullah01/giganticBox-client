@@ -1,0 +1,17 @@
+.active-link {
+    border-bottom: 2px solid white;
+    color: white;
+}
+
+.link {
+    margin-left: 15px;
+}
+
+.link:hover {
+    color: gray;
+}
+
+.not-active {
+    border-bottom: 0;
+    color: white;
+}
