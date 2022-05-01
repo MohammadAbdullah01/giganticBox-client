@@ -27,8 +27,8 @@ const Header = () => {
                             <CustomLink to='/'>Home</CustomLink>
                         </Nav>
                         <Nav>
+                            {user && <CustomLink to='/items'>Items</CustomLink>}
                             {user ? <button onClick={logOut}>log out</button> : <CustomLink to='/login'>Login</CustomLink>}
-
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

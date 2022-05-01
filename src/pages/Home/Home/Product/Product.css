@@ -1,0 +1,9 @@
+.product {
+    border: 1px solid gray;
+    padding: 10px;
+}
+
+.product-img {
+    width: 300px;
+    height: 200px;
+}
