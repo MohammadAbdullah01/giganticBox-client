@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Table } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import useProducts from '../../../hooks/useProducts';
 
 const ManageInventory = () => {
     const [loading, setLoading] = useState(false)
     const [products, setProducts] = useProducts(loading)
+    const navigate = useNavigate()
     const handleDelete = id => {
         const proceed = window.confirm('are you sure you want to delete?')
         if (proceed) {
@@ -25,6 +27,7 @@ const ManageInventory = () => {
     }
     return (
         <div>
+            <button onClick={() => navigate('/products/add')}>Add new product</button>
             <h1>manage inventory</h1>
             <div className="table-responsive">
                 <Table striped bordered hover size="sm">

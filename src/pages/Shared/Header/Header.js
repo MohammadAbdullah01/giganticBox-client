@@ -27,7 +27,10 @@ const Header = () => {
                             <CustomLink to='/'>Home</CustomLink>
                         </Nav>
                         <Nav>
-                            {user && <CustomLink to='/items'>Items</CustomLink>}
+
+                            {user && <CustomLink to='/items'>My Products</CustomLink>}
+                            {user && <CustomLink to='/products/add'>Add Product</CustomLink>}
+                            {user && <CustomLink to='/manageinventory'>Manage Products</CustomLink>}
                             {user ? <button onClick={logOut}>log out</button> : <CustomLink to='/login'>Login</CustomLink>}
                         </Nav>
                     </Navbar.Collapse>
