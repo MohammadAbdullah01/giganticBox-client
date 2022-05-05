@@ -1,0 +1,102 @@
+.login-container {
+    background-image: url('../../../images/login.jpg');
+    min-height: 100vh;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.form-container {
+    /* border: 2px solid white; */
+    background-color: rgba(35, 35, 37, 0.596);
+    width: 50%;
+    padding: 10px;
+    color: white;
+    height: 100%;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.login-title {
+    margin-bottom: 25px;
+}
+
+.form-input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input-group input {
+    background-color: transparent;
+    border: none;
+    outline: 0;
+    border-bottom: 2px solid white;
+    ;
+    color: white;
+    width: 80%;
+    margin: 0 auto 25px auto;
+}
+
+.form-input-group input:focus {
+    background-color: transparent;
+    border: none;
+    outline: 0;
+    border-bottom: 2px solid white;
+    ;
+}
+
+.login-btn {
+    color: black;
+    background-color: rgb(241, 231, 231);
+    padding: 5px 30px;
+    font-size: 18px;
+    border-radius: 25px;
+    border: none;
+    width: 80%;
+}
+
+.login-mechanism {
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 15px auto;
+}
+
+.social-login {
+    color: black;
+    background-color: rgb(241, 231, 231);
+    padding: 5px 30px;
+    font-size: 18px;
+    border-radius: 25px;
+    border: none;
+    width: 80%;
+    margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+    .form-container {
+        /* border: 2px solid white; */
+        background-color: rgba(35, 35, 37, 0.596);
+        width: 90%;
+        padding: 10px;
+        color: white;
+        height: 100%;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .login-mechanism {
+        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin: 15px auto;
+    }
+}

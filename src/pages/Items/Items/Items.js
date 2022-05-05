@@ -22,12 +22,13 @@ const Items = () => {
                 //             setMyProducts(data.result)
                 //         }
                 //     })
-                const res = await fetch(`http://localhost:5000/myproducts?email=${user?.email}&token=${localStorage.getItem("accessToken")}`)
+                const res = await fetch(`https://evening-basin-87782.herokuapp.com/myproducts?email=${user?.email}&token=${localStorage.getItem("accessToken")}`)
                 const data = await res.json()
                 if (data.message === "success") {
                     setMyProducts(data.result)
                 } else {
-                    navigate('/')
+                    setLoading(!loading)
+                    navigate('/login')
                     signOut(auth)
                 }
             }
@@ -35,7 +36,7 @@ const Items = () => {
                 // console.log(err.response.status)
             }
         })()
-    }, [user, user?.email, token, navigate])
+    }, [user, user?.email, token, navigate, loading])
 
 
 

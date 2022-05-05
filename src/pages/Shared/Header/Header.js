@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import './Header.css'
 import CustomLink from '../CustomLink/CustomLink';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import brand from '../../../images/brand.png'
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase/firebase.init';
@@ -10,7 +10,10 @@ import { signOut } from 'firebase/auth';
 
 
 const Header = () => {
+    const location = useLocation()
+    console.log(location)
     const [user, loading, error] = useAuthState(auth);
+    console.log(user);
     const logOut = () => {
         signOut(auth)
     }
@@ -25,6 +28,7 @@ const Header = () => {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
                             <CustomLink to='/'>Home</CustomLink>
+                            <CustomLink to='/blog'>Blog</CustomLink>
                         </Nav>
                         <Nav>
 
