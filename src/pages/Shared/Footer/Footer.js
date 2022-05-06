@@ -6,7 +6,7 @@ const Footer = () => {
     const login = location.page;
     // style={`${location.pathname === "/login" ? "display:'none'" : "display:'block'"}`}
     return (
-        <div className={`my-5 justify-content-center align-items-center ${location.pathname === '/login' ? 'd-none' : 'd-block'}`}>
+        <div className={`my-5 justify-content-center align-items-center ${location.pathname === '/login' || location.pathname === '/register' ? 'd-none' : 'd-block'}`}>
             <p>this is footer</p>
         </div>
     );
