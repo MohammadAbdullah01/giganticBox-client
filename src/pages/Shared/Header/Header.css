@@ -2,4 +2,32 @@
     background-color: #3835ca;
     color: white;
     min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.log-out-btn {
+    width: 150px;
+    padding: 6px 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    border: none;
+    background-color: rgb(241, 107, 18);
+    margin-left: 15px;
+}
+
+@media only screen and (max-width: 768px) {
+    .log-out-btn {
+        width: 150px;
+        padding: 6px 0;
+        font-size: 18px;
+        font-weight: 500;
+        color: white;
+        border: none;
+        background-color: rgb(241, 107, 18);
+        margin-left: 15px;
+        margin-top: 10px;
+    }
 }

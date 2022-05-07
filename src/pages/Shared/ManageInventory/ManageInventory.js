@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Table } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import useProducts from '../../../hooks/useProducts';
+import { FaTrash } from 'react-icons/fa';
+import './ManageInventory.css'
 
 const ManageInventory = () => {
     const [loading, setLoading] = useState(false)
@@ -34,7 +36,6 @@ const ManageInventory = () => {
                     <thead>
                         <tr className="align-middle text-center">
                             <th>Name</th>
-                            <th>Supplier</th>
                             <th>Price</th>
                             <th>Quantity</th>
                             <th>Image</th>
@@ -45,11 +46,10 @@ const ManageInventory = () => {
                         {products.map(product =>
                             <tr className="align-middle text-center" key={product._id}>
                                 <td>{product.name}</td>
-                                <td>{product.supplier}</td>
                                 <td>{product.price}</td>
                                 <td>{product.quantity}</td>
                                 <td><img style={{ width: "70px" }} src={product.img} alt="" /></td>
-                                <td><button onClick={() => handleDelete(product._id)}>delete</button></td>
+                                <td><button style={{ border: "none" }} onClick={() => handleDelete(product._id)}>< FaTrash className='delete-btn' /></button></td>
                             </tr>
                         )}
 

@@ -1,17 +1,29 @@
 .active-link {
-    border-bottom: 2px solid white;
-    color: white;
+    /* border-bottom: 2px solid white; */
+    color: orange;
+    text-decoration: none;
 }
 
 .link {
+    display: block;
     margin-left: 15px;
 }
 
 .link:hover {
-    color: gray;
+    color: orange;
+
 }
 
 .not-active {
     border-bottom: 0;
     color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    .link {
+        margin-left: 15px;
+        margin-top: 15px;
+    }
+
+
 }

@@ -30,10 +30,12 @@ const Header = () => {
                         </Nav>
                         <Nav>
 
-                            {user && <CustomLink to='/items'>My Products</CustomLink>}
-                            {user && <CustomLink to='/products/add'>Add Product</CustomLink>}
-                            {user && <CustomLink to='/manageinventory'>Manage Products</CustomLink>}
-                            {user ? <button onClick={logOut}>log out</button> : <CustomLink to='/login'>Login</CustomLink>}
+                            <div className='d-flex flex-column flex-lg-row  ' style={{ marginTop: "5px" }}>
+                                {user && <CustomLink to='/items'>My Products</CustomLink>}
+                                {user && <CustomLink to='/products/add'>Add Product</CustomLink>}
+                                {user && <CustomLink to='/manageinventory'>Manage Products</CustomLink>}
+                            </div>
+                            {user ? <button className='log-out-btn' onClick={logOut}>log out</button> : <CustomLink to='/login'>Login</CustomLink>}
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

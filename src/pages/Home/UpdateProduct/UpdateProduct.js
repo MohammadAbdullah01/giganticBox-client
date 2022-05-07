@@ -29,7 +29,7 @@ const UpdateProduct = () => {
         e.preventDefault()
 
         if (e.target.addquantity.value > 0) {
-            const newQuantity = parseInt(e.target.addquantity.value) + quantity;
+            const newQuantity = parseInt(e.target.addquantity.value) + parseInt(quantity);
             fetch(`https://evening-basin-87782.herokuapp.com/product/addquantity/${id}`, {
                 method: "PUT",
                 headers: {

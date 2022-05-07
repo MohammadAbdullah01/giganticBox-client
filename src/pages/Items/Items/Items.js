@@ -15,13 +15,6 @@ const Items = () => {
     useEffect(() => {
         (async () => {
             try {
-                // fetch(`http://localhost:5000/myproducts?email=${user?.email}&token=${localStorage.getItem("accessToken")}`)
-                //     .then(res => res.json())
-                //     .then(data => {
-                //         if (data.message === "success") {
-                //             setMyProducts(data.result)
-                //         }
-                //     })
                 const res = await fetch(`https://evening-basin-87782.herokuapp.com/myproducts?email=${user?.email}&token=${localStorage.getItem("accessToken")}`)
                 const data = await res.json()
                 if (data.message === "success") {
@@ -42,7 +35,7 @@ const Items = () => {
 
     return (
         <div>
-            <Container>
+            <Container className='mt-3'>
                 <div>
                     <Row className='g-3'>
                         {myProducts?.map(product => <Product

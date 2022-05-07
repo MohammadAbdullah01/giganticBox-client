@@ -27,16 +27,15 @@ const Product = ({ product, children }) => {
     const { _id, name, img, price, quantity, desc, supplier } = product;
     return (
         <Col sm={12} md={6} lg={4}>
-            <div className='product'>
+            <div className='product mx-auto'>
                 <img className='product-img' src={img} alt="" />
-                <h2>{name}</h2>
+                <h4>{name}</h4>
                 <p><small>{supplier}</small></p>
-                <h3>price: ${price}</h3>
-                <h4>quantity: {quantity}</h4>
+                <h5>price: ${price}</h5>
+                <h6>quantity: {quantity}</h6>
                 <p><small>{desc}</small></p>
-                <button onClick={() => navigate(`/update/${_id}`)}>Update</button>
-                {children && <button onClick={() => handleDelete(children.id)}>Delete</button>}
-
+                <button className='update-btn' onClick={() => navigate(`/update/${_id}`)}>Update</button>
+                {children && <button className='update-btn ms-2' onClick={() => handleDelete(children.id)}>Delete</button>}
             </div>
         </Col>
     );
