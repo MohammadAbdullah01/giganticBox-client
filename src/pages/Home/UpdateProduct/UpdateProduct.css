@@ -69,7 +69,7 @@
     color: white;
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1220px) {
     .update-container {
         display: flex;
         flex-direction: column;

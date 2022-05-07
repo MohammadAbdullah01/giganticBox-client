@@ -17,7 +17,6 @@ const Product = ({ product, children }) => {
                 .then(data => {
                     if (data.deletedCount > 0) {
                         children.setLoading(!children.loading)
-                        alert("successfully deleted")
                     }
                 })
         }

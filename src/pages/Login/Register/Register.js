@@ -7,6 +7,7 @@ import google from '../../../images/social/google.png'
 import facebook from '../../../images/social/facebook.png'
 import toast, { Toaster } from 'react-hot-toast';
 import { sendEmailVerification } from 'firebase/auth';
+import { Spinner } from 'react-bootstrap';
 
 const Register = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
@@ -67,6 +68,9 @@ const Register = () => {
                             <label htmlFor="password">Enter Your Password</label>
                             <input type="password" name="password" id="password" required />
                         </div>
+                        {(loading || loading1 || loading2) && <p>
+                            <Spinner animation="border" variant="success" />
+                        </p>}
                         <input className='login-btn' type="submit" value="Register" />
                     </form>
                     <div className='login-mechanism'><p>Already have an account? <span onClick={() => navigate('/login')} style={{ color: "orange", cursor: "pointer" }}>Login</span></p></div>

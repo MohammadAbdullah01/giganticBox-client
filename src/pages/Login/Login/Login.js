@@ -8,6 +8,7 @@ import google from '../../../images/social/google.png'
 import facebook from '../../../images/social/facebook.png'
 import toast, { Toaster } from 'react-hot-toast';
 import { signInWithEmailAndPassword } from 'firebase/auth';
+import { Spinner } from 'react-bootstrap';
 
 const Login = () => {
     const [emailPassUser, setEmailPassUser] = useState({})
@@ -76,6 +77,9 @@ const Login = () => {
                             <label htmlFor="password">Enter Your Password</label>
                             <input type="password" name="password" id="password" required />
                         </div>
+                        {(loading || loading1) && <p>
+                            <Spinner animation="border" variant="success" />
+                        </p>}
                         <input className='login-btn' type="submit" value="Login" />
                     </form>
 

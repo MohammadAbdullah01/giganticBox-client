@@ -13,15 +13,15 @@ const Footer = () => {
             <div className='footer-container d-md-flex justify-content-between'>
                 <div className='footer-left '>
                     <h5>Important links</h5>
-                    <p className='my-1'>Privacy Policy</p>
-                    <p className='my-1'>FAQ and answers</p>
-                    <p className='my-1'>Our happy clients</p>
+                    <p className='my-1'><span className='footer-text'> Privacy Policy</span></p>
+                    <p className='my-1'><span className='footer-text'> FAQ and answers</span></p>
+                    <p className='my-1'><span className='footer-text'> Our happy clients</span></p>
                 </div>
                 <div className='footer-left'>
                     <h5>Our services</h5>
-                    <p className='my-1'>Home delivery</p>
-                    <p className='my-1'>7 days return</p>
-                    <p className='my-1'>24/7 online</p>
+                    <p className='my-1'><span className='footer-text'> Home delivery</span></p>
+                    <p className='my-1'><span className='footer-text'> 7 days return</span></p>
+                    <p className='my-1'><span className='footer-text'> 24/7 online</span></p>
                 </div>
                 <div className='footer-right '><h5>Contact with us</h5><p><span><FaFacebook className='social-icon' /></span><span><FaLinkedin className='social-icon' /></span><span><FaInstagramSquare className='social-icon' /></span></p>
                     <p><span><FaWhatsappSquare className='social-icon' /></span><span><FaTwitterSquare className='social-icon' /></span></p>
