@@ -1,0 +1,16 @@
+.add-product-form input,
+textarea {
+    border: 1px solid #F16B12;
+    padding: 5px;
+}
+
+.add-product-container {
+    width: 40%;
+    margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 700px) {
+    .add-product-container {
+        width: 80%;
+    }
+}

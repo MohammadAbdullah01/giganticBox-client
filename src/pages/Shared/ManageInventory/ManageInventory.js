@@ -22,15 +22,16 @@ const ManageInventory = () => {
                 .then(data => {
                     if (data.deletedCount > 0) {
                         setLoading(!loading)
-                        alert("successfully deleted")
                     }
                 })
         }
     }
     return (
         <div>
-            <button onClick={() => navigate('/products/add')}>Add new product</button>
-            <h1>manage inventory</h1>
+            <div className='container d-flex mt-3 justify-content-end'>
+                <button className='manage-inventory-btn' onClick={() => navigate('/products/add')}> <span style={{ borderBottom: "2px solid white" }}>Add new product</span></button>
+            </div>
+            <h1 className='text-center common-clr mt-3 mb-2'>MANAGE ITEMS</h1>
             <div className="table-responsive">
                 <Table striped bordered hover size="sm">
                     <thead>
@@ -39,7 +40,7 @@ const ManageInventory = () => {
                             <th>Price</th>
                             <th>Quantity</th>
                             <th>Image</th>
-                            <th>Manage</th>
+                            <th>Delete</th>
                         </tr>
                     </thead>
                     <tbody>

@@ -55,27 +55,33 @@ const UpdateProduct = () => {
 
     return (
         <div>
-
-            <h1>update</h1>
-            <button onClick={() => navigate('/manageinventory')}>Manage Inventory</button>
+            <div className='btn-container container'>
+                <button className='manage-inventory-btn' onClick={() => navigate('/manageinventory')}> <span style={{ borderBottom: "2px solid white" }}>Manage Inventory</span></button>
+            </div>
             <Container>
-                <div>
-                    <div>
-                        <img className='update-product-img' src={img} alt="" />
-                        <h1>{name}</h1>
-                        <h2>quantity: {quantity}</h2>
+                <div className='update-container'>
+                    <div className='update-left'>
+                        <div>
+                            <img className='update-product-img' src={img} alt="" />
+
+                        </div>
                     </div>
-                </div>
-                <div>
-                    <br /><br />
-                    <button onClick={() => handleDeliver(productId)}>deliver</button>
-                    <br /><br />
-                    <div>
-                        <form onSubmit={(e) => updateQuantity(e, productId)}>
-                            <label htmlFor="addquantity">Add quantity:</label>
-                            <input type="number" name="addquantity" id="addquantity" />
-                            <input type="submit" value="update quantity" />
-                        </form>
+                    <div className='update-right'>
+                        <h3>{name}</h3>
+                        <h6>Supplier:{supplier}</h6>
+                        <h5>Price: {price}</h5>
+                        <h5>Quantity: {quantity}</h5>
+                        <p>Sold: {quantity < 1 ? "yes" : "no"}</p>
+                        <p>{desc}</p>
+                        {quantity < 1 ? <button className='sold-out-btn'>Sold out</button> : <button className='update-btn' onClick={() => handleDeliver(productId)}>deliver</button>
+                        }
+                        <div className='mt-3'>
+                            <form className='stock-form' onSubmit={(e) => updateQuantity(e, productId)}>
+                                <label htmlFor="addquantity">Restock:</label>
+                                <input className='stock-input' placeholder='quantity' type="number" name="addquantity" id="addquantity" />
+                                <input className='stock-btn' type="submit" value="stock" />
+                            </form>
+                        </div>
                     </div>
                 </div>
             </Container>

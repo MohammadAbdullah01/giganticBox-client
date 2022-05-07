@@ -8,7 +8,7 @@
 }
 
 .log-out-btn {
-    width: 150px;
+    width: 130px;
     padding: 6px 0;
     font-size: 18px;
     font-weight: 500;
@@ -20,7 +20,7 @@
 
 @media only screen and (max-width: 768px) {
     .log-out-btn {
-        width: 150px;
+        width: 130px;
         padding: 6px 0;
         font-size: 18px;
         font-weight: 500;

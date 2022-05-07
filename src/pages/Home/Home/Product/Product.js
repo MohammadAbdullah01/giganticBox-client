@@ -30,9 +30,9 @@ const Product = ({ product, children }) => {
             <div className='product mx-auto'>
                 <img className='product-img' src={img} alt="" />
                 <h4>{name}</h4>
-                <p><small>{supplier}</small></p>
-                <h5>price: ${price}</h5>
-                <h6>quantity: {quantity}</h6>
+                <p><small>Supplier: {supplier}</small></p>
+                <h5>Price: ${price}</h5>
+                <h6>Quantity: {quantity}</h6>
                 <p><small>{desc}</small></p>
                 <button className='update-btn' onClick={() => navigate(`/update/${_id}`)}>Update</button>
                 {children && <button className='update-btn ms-2' onClick={() => handleDelete(children.id)}>Delete</button>}

@@ -3,6 +3,7 @@ import { Container, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import useProducts from '../../../hooks/useProducts';
 import Product from '../Home/Product/Product';
+import './Products.css'
 
 const Products = () => {
     const navigate = useNavigate()
@@ -10,7 +11,7 @@ const Products = () => {
     const firstSixProducts = products.slice(0, 6) || {};
     return (
         <div>
-            <h1>all products</h1>
+            <h1 className='text-center mt-5 mb-3 common-clr' >OUR REFRIGERATORS</h1>
             <Container>
                 <div>
                     <Row className='g-3'>
@@ -21,7 +22,9 @@ const Products = () => {
                     </Row>
                 </div>
                 <br />
-                <button onClick={() => navigate('/manageinventory')}>Manage Inventory</button>
+                <div className='d-flex justify-content-end'>
+                    <button className='manage-inventory-btn-2' onClick={() => navigate('/manageinventory')}>Manage Inventory</button>
+                </div>
             </Container>
         </div>
     );
