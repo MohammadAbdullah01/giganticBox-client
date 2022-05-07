@@ -9,7 +9,9 @@
 
 @media only screen and (min-width: 600px) {
     .not-found-img {
-        width: 100%;
+        width: 80%;
+        display: block;
+        margin: 0 auto;
         height: 70vh;
     }
 }

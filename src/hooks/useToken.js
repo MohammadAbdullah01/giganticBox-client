@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 
 const useToken = user => {
     const [token, setToken] = useState("")
-    const email = user?.user?.email;
+    const email = user?.user?.email || user?.email;
     useEffect(() => {
         fetch('https://evening-basin-87782.herokuapp.com/login', {
             method: "post",
@@ -19,7 +19,7 @@ const useToken = user => {
             )
     }, [user])
 
-    return [token]
+    return [token, setToken]
 }
 
 export default useToken;

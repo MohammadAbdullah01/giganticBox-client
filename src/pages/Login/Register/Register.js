@@ -39,9 +39,19 @@ const Register = () => {
             toast.error('password length too short', { id: "2" })
             return;
         }
+
         createUserWithEmailAndPassword(email, password)
 
+
+
+
     }
+    useEffect(() => {
+        if (error?.message?.includes("auth/email-already-in-use") || error1?.message?.includes("auth/email-already-in-use") || error2?.message?.includes("auth/email-already-in-use")) {
+            toast.error("user already exist", { id: "15" })
+        }
+    }, [error, error1, error2])
+
     return (
         <div className='login-container'>
             <Toaster />
