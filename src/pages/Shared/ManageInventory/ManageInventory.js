@@ -4,13 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import useProducts from '../../../hooks/useProducts';
 import { FaTrash } from 'react-icons/fa';
 import './ManageInventory.css'
-import AOS from 'aos';
-import 'aos/dist/aos.css'
 
 const ManageInventory = () => {
-    useEffect(() => {
-        AOS.init();
-    })
     const [loading, setLoading] = useState(false)
     const [products, setProducts] = useProducts(loading)
     const navigate = useNavigate()
@@ -38,7 +33,7 @@ const ManageInventory = () => {
                     <div className='container d-flex mt-3 justify-content-end'>
                         <button className='manage-inventory-btn' onClick={() => navigate('/products/add')}> <span style={{ borderBottom: "2px solid white" }}>Add new product</span></button>
                     </div>
-                    <h1 className='text-center common-clr mt-3 mb-2' data-aos="zoom-in" data-aos-duration="1000">MANAGE ITEMS</h1>
+                    <h1 className='text-center common-clr mt-3 mb-2'>MANAGE ITEMS</h1>
                     <div className="table-responsive">
                         <Table striped bordered hover size="sm">
                             <thead>

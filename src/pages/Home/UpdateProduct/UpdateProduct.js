@@ -71,7 +71,7 @@ const UpdateProduct = () => {
                         <h6>Supplier:{supplier}</h6>
                         <h5>Price: {price}</h5>
                         <h5>Quantity: {quantity}</h5>
-                        <p>Sold: {quantity < 1 ? "yes" : "no"}</p>
+                        <p>Sold out: {quantity < 1 ? "yes" : "no"}</p>
                         <p>{desc}</p>
                         {quantity < 1 ? <button className='sold-out-btn'>Sold out</button> : <button className='update-btn' onClick={() => handleDeliver(productId)}>deliver</button>
                         }
