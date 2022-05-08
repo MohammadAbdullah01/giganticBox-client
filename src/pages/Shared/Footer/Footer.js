@@ -1,8 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import './Footer.css'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faCoffee, faMessage, faFacebook } from '@fortawesome/free-solid-svg-icons'
 import { FaFacebook, FaLinkedin, FaInstagramSquare, FaTwitterSquare, FaWhatsappSquare } from 'react-icons/fa';
 
 const Footer = () => {

@@ -64,22 +64,6 @@ const Login = () => {
             return;
         }
         signInWithEmailAndPassword(email, password)
-        // signInWithEmailAndPassword(auth, email, password)
-        //     .then((userCredential) => {
-        //         const user = userCredential.user;
-        //         // console.log(user)
-        //         setEmailPassUser(user)
-        //         // navigate(from, { replace: true })
-        //     })
-        //     .catch((error) => {
-        //         console.log(error.message)
-        //         if (error.message.includes("auth/user-not-found")) {
-        //             toast.error("no user found", { id: "6" })
-        //         }
-        //         if (error.message.includes("auth/wrong-password")) {
-        //             toast.error("wrong password", { id: "5" })
-        //         }
-        //     });
 
     }
 

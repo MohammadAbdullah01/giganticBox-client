@@ -42,10 +42,6 @@ const Register = () => {
         }
 
         createUserWithEmailAndPassword(email, password)
-
-
-
-
     }
     useEffect(() => {
         if (error?.message?.includes("auth/email-already-in-use") || error1?.message?.includes("auth/email-already-in-use") || error2?.message?.includes("auth/email-already-in-use")) {
