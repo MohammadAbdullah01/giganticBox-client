@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Services.css'
 import { Carousel } from 'react-bootstrap';
 import stock from '../../images/services/stock.jpg'
 import delivery from '../../images/services/delivery.jpg'
 import communication from '../../images/services/communication.jpg'
 import contact from '../../images/services/contact.jpg'
+import AOS from 'aos';
+import 'aos/dist/aos.css'
 
 const Services = () => {
+    useEffect(() => {
+        AOS.init();
+    })
     return (
         <div>
             <div>
@@ -17,9 +22,9 @@ const Services = () => {
                             src={stock}
                             alt="First slide"
                         />
-                        <Carousel.Caption className='service-summary'>
-                            <h2 className="common-clr">We provide best refrigerators with guaranty.</h2>
-                            <p className="text-black">We provide fridges with low price. Our fridges are good in quality and long lasting. We have several companies best fridges.</p>
+                        <Carousel.Caption className='service-summary' data-aos="flip-left" data-aos-duration="1000">
+                            <h2 className="common-clr">We stock best refrigerators with authentic suppliers.</h2>
+                            <p className="text-black">We always verify the fridge and the owner then we store the fridge in our warehouse. So we have qualityful fridges.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item className='carousel-container'>
@@ -29,9 +34,9 @@ const Services = () => {
                             alt="Second slide"
                         />
 
-                        <Carousel.Caption className='service-summary'>
-                            <h2 className="common-clr">Free Delivery</h2>
-                            <p className="text-black">Free delivery available if u become our premium member or fulfill our requirements.</p>
+                        <Carousel.Caption className='service-summary' data-aos="flip-left">
+                            <h2 className="common-clr">Free transport</h2>
+                            <p className="text-black">For transporting fridges if suppliers fullfil our requirement we offer free transports.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item className='carousel-container'>
@@ -41,9 +46,9 @@ const Services = () => {
                             alt="third slide"
                         />
 
-                        <Carousel.Caption className='service-summary'>
+                        <Carousel.Caption className='service-summary' data-aos="flip-left">
                             <h2 className="common-clr">Good Communication</h2>
-                            <p className="text-black">We care of our clients. We do extra care of or clients so the client can make a good communication with us.</p>
+                            <p className="text-black">We maintain a good communication with stuffs and have a nice relation with stuff and suppliers.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item className='carousel-container'>
@@ -53,9 +58,9 @@ const Services = () => {
                             alt="fourth slide"
                         />
 
-                        <Carousel.Caption className='service-summary'>
+                        <Carousel.Caption className='service-summary' data-aos="flip-left">
                             <h2 className="common-clr">24/7 contact available</h2>
-                            <p className="text-black">We are always available in online for our customers message/call. Just knock us whenever your need.</p>
+                            <p className="text-black">We are always available in online for any need.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>

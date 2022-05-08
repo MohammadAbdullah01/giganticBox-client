@@ -24,6 +24,10 @@
     color: white;
 }
 
+.service-btn:hover {
+    background-color: rgb(235, 61, 17);
+}
+
 @media only screen and (max-width: 850px) {
     .banner-text {
         margin: 0 0 0 400px;
@@ -33,5 +37,9 @@
 @media only screen and (max-width: 700px) {
     .banner-text {
         margin: 0 0 0 0;
+    }
+
+    .banner-text p {
+        font-size: 15px;
     }
 }

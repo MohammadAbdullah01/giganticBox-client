@@ -7,3 +7,7 @@
     font-weight: 500;
     margin-bottom: 10px;
 }
+
+.manage-inventory-btn-2:hover {
+    background-color: rgb(235, 61, 17);
+}

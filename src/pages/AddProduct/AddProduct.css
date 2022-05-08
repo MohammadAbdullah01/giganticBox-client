@@ -1,12 +1,24 @@
+.add-product-section {
+    background-image: url('../../images/top-banner.png');
+    background-repeat: no-repeat;
+    background-position: top left;
+    padding: 25px 0;
+}
+
 .add-product-form input,
 textarea {
-    border: 1px solid #F16B12;
+    border: none;
     padding: 5px;
 }
 
 .add-product-container {
     width: 40%;
-    margin-bottom: 15px;
+}
+
+.product-container2 {
+    background-color: rgb(231, 209, 209);
+    border-radius: 5px;
+    padding: 4px 10px 10px 10px;
 }
 
 @media only screen and (max-width: 700px) {

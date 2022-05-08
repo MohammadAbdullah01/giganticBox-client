@@ -1,7 +1,15 @@
+.blog-container {
+    background-image: url('../../images/top-banner.png');
+    background-repeat: no-repeat;
+    background-position: top left;
+    padding: 30px 0 0 0;
+}
+
 .blog-q-a {
-    border: 1px solid gray;
+    border: 2px solid rgb(201, 184, 184);
     padding: 15px 8px;
-    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: rgb(238, 225, 225);
 }
 
 .common-clr {

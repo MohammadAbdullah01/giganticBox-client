@@ -1,16 +1,24 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
+// import React, { useState, useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css'
 import { useNavigate } from 'react-router-dom';
 import './Banner.css'
 
 const Banner = () => {
+    useEffect(() => {
+        AOS.init();
+    })
     const navigate = useNavigate()
     return (
         <div className='banner-container'>
-            <div className='banner-text'>
+            <div className='banner-text' data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine" data-aos-duration="800">
                 <h1>Refrigerators <br />
-                    We offer the highest quality appliances</h1>
-                <p>GiganticBox Appliances offers the top brands in refrigerators. We will install and service most major brands so you don’t have to go through the hassle of contacting the manufacturer. You can rest assured you’re buying the highest quality refrigerator you can find. Stop by our store to see our expansive selection of refrigerators.</p>
+                    We store the highest quality appliances</h1>
+                <p>GiganticBox Appliances stores the top brands in refrigerators. Stores fridges from top brands and maintains the stocking quantity, suppliers and other infos.</p>
                 <button onClick={() => navigate('/services')} className='service-btn'>Our services</button>
             </div>
         </div>

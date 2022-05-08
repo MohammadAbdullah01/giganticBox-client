@@ -18,6 +18,10 @@
     margin-left: 15px;
 }
 
+.log-out-btn:hover {
+    background-color: rgb(235, 61, 17);
+}
+
 @media only screen and (max-width: 768px) {
     .log-out-btn {
         width: 130px;

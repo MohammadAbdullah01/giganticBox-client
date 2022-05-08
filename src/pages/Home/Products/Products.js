@@ -5,6 +5,7 @@ import useProducts from '../../../hooks/useProducts';
 import Product from '../Home/Product/Product';
 import './Products.css'
 
+
 const Products = () => {
     const navigate = useNavigate()
     const [products, setProducts] = useProducts([])
