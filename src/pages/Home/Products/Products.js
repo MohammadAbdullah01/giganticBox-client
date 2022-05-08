@@ -24,7 +24,7 @@ const Products = () => {
                         </Row>
                     </div>
                     <br />
-                    <div className='d-flex'>
+                    <div className='d-flex justify-content-end'>
                         <button className='manage-inventory-btn-2' onClick={() => navigate('/manageinventory')}>Manage Inventory</button>
                     </div>
                 </Container>

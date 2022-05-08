@@ -1,6 +1,6 @@
 import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
-import { Container, Row } from 'react-bootstrap';
+import { Container, Row, Spinner } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../../firebase/firebase.init';
@@ -34,21 +34,27 @@ const Items = () => {
 
 
     return (
-        <div>
-            <Container className='mt-3'>
+        <>
+            {myProducts.length ?
                 <div>
-                    <Row className='g-3'>
-                        {myProducts?.map(product => <Product
-                            key={product._id}
-                            product={product}
-                        >
-                            {{ id: product._id, setLoading, loading: loading }}
-                        </Product>)}
-                    </Row>
+                    <Container className='mt-3'>
+                        <div>
+                            <Row className='g-3'>
+                                {myProducts?.map(product => <Product
+                                    key={product._id}
+                                    product={product}
+                                >
+                                    {{ id: product._id, setLoading, loading: loading }}
+                                </Product>)}
+                            </Row>
+                        </div>
+                        <br />
+                    </Container>
                 </div>
-                <br />
-            </Container>
-        </div>
+                :
+                <div className='w-100 h-100 mx-auto text-center my-5' ><Spinner animation="border" variant="success" /></div>
+            }
+        </>
     );
 };
 
