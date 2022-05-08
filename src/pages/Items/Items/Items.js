@@ -39,6 +39,7 @@ const Items = () => {
             {myProducts.length ?
                 <div className='my-items-container'>
                     <Container className='mt-3'>
+                        <h1 className='my-5 common-clr text-center'>MY PRODUCTS</h1>
                         <div>
                             <Row className='g-3'>
                                 {myProducts?.map(product => <Product
