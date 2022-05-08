@@ -5,6 +5,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../../firebase/firebase.init';
 import Product from '../../Home/Home/Product/Product';
+import './Items.css'
 
 const Items = () => {
     const navigate = useNavigate()
@@ -36,7 +37,7 @@ const Items = () => {
     return (
         <>
             {myProducts.length ?
-                <div>
+                <div className='my-items-container'>
                     <Container className='mt-3'>
                         <div>
                             <Row className='g-3'>

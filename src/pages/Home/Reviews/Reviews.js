@@ -13,12 +13,12 @@ import 'swiper/css/scrollbar';
 import 'swiper/less';
 import 'swiper/less/navigation';
 import 'swiper/less/pagination';
-import { Container } from 'react-bootstrap';
+import { Container, Spinner } from 'react-bootstrap';
 
 const Reviews = () => {
     const [reviews, setReviews] = useState([])
     useEffect(() => {
-        fetch("http://localhost:5000/reviews")
+        fetch("https://evening-basin-87782.herokuapp.com/reviews")
             .then(res => res.json())
             .then(data => {
                 setReviews(data)
@@ -34,35 +34,37 @@ const Reviews = () => {
     // console.log(JSON.stringify(users))
     console.log(reviews)
     return (
-        <Container>
-            <h1 className='text-center common-clr mt-5 mb-4'>HAPPY CLIENTS</h1>
-            <div>
-                <Swiper
-                    // install Swiper modules
-                    modules={[Navigation, Pagination, Scrollbar, A11y]}
-                    spaceBetween={40}
-                    slidesPerView={3}
-                    navigation
-                    pagination={{ clickable: true }}
-                    scrollbar={{ draggable: true }}
-                    onSwiper={(swiper) => console.log(swiper)}
-                    onSlideChange={() => console.log('slide change')}
-                >
-                    {reviews.map(review => <SwiperSlide>
-                        <div className='review-container'>
-                            <img className='review-img' src={review.img} alt="" />
-                            <h4 >{review.name}</h4>
-                            <p className='common-clr'>{review.review}</p>
-                        </div>
-                    </SwiperSlide>)}
-                    {/* <SwiperSlide>Slide 1</SwiperSlide>
-                    <SwiperSlide>Slide 2</SwiperSlide>
-                    <SwiperSlide>Slide 3</SwiperSlide>
-                    <SwiperSlide>Slide 4</SwiperSlide> */}
-                    <br />
-                </Swiper>
-            </div>
-        </Container>
+        <>
+            {reviews.length ?
+                <Container>
+                    <h1 className='text-center common-clr mt-5 mb-5'>HAPPY CLIENTS</h1>
+                    <div>
+                        <Swiper
+                            // install Swiper modules
+                            modules={[Navigation, Pagination, A11y]}
+                            spaceBetween={40}
+                            slidesPerView={3}
+                            navigation
+                            pagination={{ clickable: true }}
+                            scrollbar={{ draggable: true }}
+                            onSwiper={(swiper) => console.log(swiper)}
+                            onSlideChange={() => console.log('slide change')}
+                        >
+                            {reviews.map(review => <SwiperSlide>
+                                <div className='review-container'>
+                                    <img className='review-img' src={review.img} alt="" />
+                                    <h4 >{review.name}</h4>
+                                    <p className='common-clr'>{review.review}</p>
+                                </div>
+                            </SwiperSlide>)}
+                            <br />
+                        </Swiper>
+                    </div>
+                </Container>
+                :
+                <div className='w-100 h-100 mx-auto text-center my-5' ><Spinner animation="border" variant="success" /></div>
+            }
+        </>
     );
 };
 

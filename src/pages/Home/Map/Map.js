@@ -6,7 +6,7 @@ import './Map.css'
 const Map = () => {
     return (
         <Container>
-            <h1 className='common-clr text-center mt-5'>FIND US ON MAP</h1>
+            <h1 className='common-clr text-center mt-5 mb-3'>FIND US ON MAP</h1>
             <MapContainer center={[23.660936, 90.162226]} zoom={13} scrollWheelZoom={false}>
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
